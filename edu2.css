@@ -1,0 +1,109 @@
+img{
+    height: 200px;
+}
+header img{
+    height: 100px;
+}
+body{
+    background-image:url('../imgs/Reading\ Book\ Phone\ Wallpaper\ \(3\).png') ;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.container{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+    margin-top: 200px;
+}
+i{
+    width: 30px;
+}
+.header2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header2 .title{
+    margin-top: -400px;
+    margin-left: -60px;
+} 
+.header2 .icon-cart{
+    position: relative;
+    font-size: 20px;
+    color: #eee;
+    margin-left: 850px;
+    margin-top: -40px;
+}
+.header2 .icon-cart span{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(235, 0, 0);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+}
+.listProduct .item img{
+    width: 100%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.listProduct .item{
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+.listProduct .item:hover{
+    transform: scale(1.1);
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.container p{
+    color: #eee;
+}
+.container .header2 .title{
+    color: #eee;
+    font-style:oblique;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 100px;
+}
+.listProduct .item .addCart a{
+    color: #eee;
+}
+.listProduct .item .addCart a:visited{
+    color:#E8BC0E ;
+}

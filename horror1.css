@@ -1,0 +1,128 @@
+*{
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  box-sizing: 0;
+  margin:0 ;
+  text-decoration: none;
+}
+#horor{
+  background: url('../imgs/back.jpg') center center/cover no-repeat;
+  height: 100%;
+}
+#bookList {
+  list-style-type: none;
+  padding: 0;
+}
+.search-container {
+      text-align: center;
+      margin-bottom: 10px;
+      box-sizing: border-box ;
+      padding-top: 200px;
+      
+    }
+
+    .search-input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 70%;
+      box-sizing: border-box ;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color:#b4cde5;
+      border: none;
+      width: 20%;
+      box-sizing: border-box ;
+    }
+
+    .search-button:hover {
+      background-color: #45a049;
+    }
+
+
+.title h1{
+  padding: 40px ;
+  margin-left: 235px;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: -250px;
+  
+}
+ .categories-conatiner{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+gap: 1.5rem;
+margin-top: 2rem;
+
+}
+.categories-conatiner .box{
+  position: relative;
+  padding: 10px;
+  display: flex;
+  border: solid rgb(0, 0, 36);
+  box-shadow: 1px 2px 20px 20px rgb(184, 184, 184) inset;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+
+}
+.categories-conatiner img{
+  width: 80%;
+  height: 250px;
+  object-position: center;
+  object-fit: contain;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 0.5rem;
+
+}
+.categories-conatiner .box h3{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 3px 0 3px;
+}
+.categories-conatiner .box p{
+  margin-left: 0;
+}
+.categories-conatiner .box .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.categories-conatiner .box .content span{
+  padding: 0 1rem;
+  color: #1f1f1f;
+  background-color:#F3C00F  ;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.categories-conatiner .box .content a{
+  padding: 0 2px;
+  margin: 2px;
+  border: 1px solid #87CCE3 ;
+  border-radius: 4px;
+  font-weight: 300;
+  color: BLACK;
+}
+.categories-conatiner .box .content a:hover{
+  background: #87CCE3  ;
+  color: #28353F ;
+  transition: 0.2s all linear;
+}
+
+
+.content .btn{
+  color: blue;
+}
+.content .btn:hover{
+ background: #CAA171;
+}

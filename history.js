@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', function () { const adVideo = document.getElementById('adVideo'); const pauseBtn = document.getElementById('pauseBtn'); pauseBtn.addEventListener('click', function () { if (adVideo.paused) { adVideo.play(); pauseBtn.textContent ='close'; } else { adVideo.pause(); pauseBtn.textContent = 'play'; } }); });

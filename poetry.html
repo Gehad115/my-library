@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title> category: Poetry</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+
+<body>
+	<header>
+		<img src="imgs/logo1.png" width="150" height="100">
+		<nav>
+			<a href="home.html"><li>home</li></a>
+			<a href="signup.html"><li>Sign up</li></a>
+			<a href="login.html"><li>Log in</li></a>
+			<a href="#"><li>learn more</li></a>
+			<a href="about.html"><li class="cons">about us</li></a>
+			
+		</nav>
+		<div class="bar">
+		<p>choose your type</p>
+		<i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+		</div>
+		</header>
+		<div class="search-container">
+			<input type="text" id="searchInput" placeholder="Search...">
+			<button onclick="search()">Search</button>
+		  </div>
+		  
+		  <div id="searchResults">
+			</div>
+
+
+<h1> <img src= "imgs/Screenshot 2024-04-27 232950.png" class = "hhh"> </h1>
+<div class = "yarab">
+	<div class = "box">
+		<a href = "https://edisciplinas.usp.br/pluginfile.php/3985648/mod_resource/content/1/LEAVES%20OF%20GRASS.pdf"><img src = "imgs/leavesofgrass.jpg"></a>
+	<h3> Leaves Of Grass </h3>
+	<p> 100 LE </p>
+ <button class="button">Add to cart</button>
+	</div>
+
+
+	<div class = "box">
+		<a href = "https://core.ac.uk/download/pdf/4838095.pdf"><img src = "imgs/thewasteland.jpg"></a>
+<h3> The Waste Land </h3>
+<p> 100 LE </p>	
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "file:///C:/Users/habib/Downloads/The_Collected_Poems_by_Langston_Hughes.pdf"><img src = "imgs/thecollectedpoemsoflangstonhughesjpg.jpg"></a>
+<h3> The Collected Poems Of<br>Langston Hughes </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href ="https://archive.org/details/sunherflowers0000kaur_v7r8/page/n3/mode/2up"><img src = "imgs/thesunandherflowers.jpg"></a>
+<h3> The Sun And<br>Her Flowers </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://littlethingsaboutmeeh.wordpress.com/wp-content/uploads/2016/05/coleman-barks-the-essential-rumi.pdf"><img src = "imgs/theessentialrumi.jpg"></a>
+<h3> The Essential Rumi </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://archive.org/details/honeyandmilk"><img src = "imgs/milkandhoney.jpg"></a>
+<h3> Milk And Honey </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://theliterat.wordpress.com/wp-content/uploads/2016/01/ariel-restored-edition.pdfhttps://www.arvindguptatoys.com/arvindgupta/rbi-comic.pdf"><img 		src = "imgs/ariel.jpg"></a>
+<h3>Ariel</h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://archive.org/details/in.ernet.dli.2015.185786"><img src= "imgs/thecompletepoems.jpg"></a>
+<h3>The Complete Poems Of<br>Emily Dickinson</h3>
+
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+<div class = "box">
+		<a href = "https://www.kahlilgibran.com/images/The%20Prophet%20Ebook%20by%20Kahlil%20Gibran.pdf"><img src= "imgs/theprophet.jpg"></a>
+<h3>The Prophet</h3>
+
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+</div>
+
+<script>
+function search() {
+  var input, filter, container, box, h3, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  container = document.getElementsByClassName("yarab")[0];
+  box = container.getElementsByClassName("box");
+
+  for (i = 0; i < box.length; i++) {
+    h3 = box[i].getElementsByTagName("h3")[0];
+    txtValue = h3.textContent || h3.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      box[i].style.display = "";
+    } else {
+      box[i].style.display = "none";
+    }
+  }
+}
+
+</script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

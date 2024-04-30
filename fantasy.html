@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Bookstore</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+  <style>
+    body {
+      font-family: serif, playfair display;
+      background-image: url("../imgs/4e17f6bc190282b706d9fe228a9309fd.jpg");
+      background-position : center;
+      color: #485e66;
+      font-size: 15px;
+    }
+    .header {
+      font-family: serif, playfair display;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      background:url("../imgs/dd8b270ae82d33ee601270e4b2b4caa9.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #fae5cd;
+      font-size: 16px;
+      height : 150px;
+      margin-bottom : 10px;
+    }
+    .container {
+      max-width: 100%;
+      justify-content : center;
+      align-items : center;
+      padding : 0 20px;   
+      display : flex;
+      flex-wrap : wrap;
+    }
+
+    .book {
+      display: flex;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      background : url("../imgs/e0b934d8b61d75b5a2c7a502538730fd.jpg") ;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      transition : transform 0.3s ease;
+      
+
+    }
+    .book:hover{
+      transform: scale(1.05);
+      
+    }
+    .book-image {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .book-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .book-details {
+      flex: 1;
+    }
+
+    .book-details h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .book-details p {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .book-details button {
+      padding: 10px 20px;
+      font-size: 15px;
+      font-style: bold;
+      font-family: serif, playfair display;
+      background-color: #bcdbe6;
+      color: #40565e;
+      border: 1.5px solid #a3bbc4;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      width: 150px;
+    }
+
+    .book-details button:hover {
+      background-color: #b4cde5;
+    }
+
+    a {
+      text-decoration: underline;
+      color: blue;
+    }
+     .search-container {
+      text-align: center;
+      margin-bottom: 10px;
+      box-sizing: border-box ;
+    }
+
+    .search-input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 80%;
+      box-sizing: border-box ;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color:#b4cde5;
+      border: none;
+      width: 15%;
+      box-sizing: border-box ;
+      text-align : center;
+      align-items: center;
+      justify-content : center ;
+    }
+
+    .search-button:hover {
+      background-color: #45a049;
+    }
+
+  @media only screen and (min-width: 700px) {
+  
+  .header {
+    height : 350px;
+    margin: 10px 0;
+    font-size: 40px ;
+    border-radius: 20px;
+    padding : 20px;
+    width :100%;
+    display : flex;
+    width: 100%;
+    text-align : center ;
+    justify-content : center;
+    align-items : center;
+  } 
+  .container {
+    display: grid ;
+    grid-template-columns:repeat(auto-fill,300px);
+    grid-gap:40px;
+    max-width :100%;
+    padding : 0 20px ;
+    margin : 0;
+    justify-content: center;
+    align-items : center;
+    text-align : center;
+  }
+  .book {
+    width: auto;
+    height : 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 30px ;
+    border-radius: 20px;
+    margin: 0 ; 
+    margin-bottom:15px
+    }
+  .book-image {
+    margin-bottom : 10px;
+    display: flex;
+    margin-right :0;
+    border-radius : 20px;    
+}
+  .book-image img{
+   border-radius : 20px;    
+  }
+  
+  
+  .book-details h2 {
+      text-align : center;
+      justify-content : center;
+      align-items : center;
+      font-size: 30px;    
+  }
+  .book-details p {
+      text-align : center;
+      justify-content : center;
+      align-items : center;
+      font-size: 20px;
+  }
+  .book-details button{
+      width : 170px;
+      font-size : 20px;
+      font-weight : bold;
+      border-radius : 10px;
+      border: 2px solid #a3bbc4;
+  }
+  .search-input {
+    width:90%;
+    height : 50px;
+    margin-bottom: 40px;
+  }
+  .search-button {
+    width: 5%;
+  }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="imgs/logo1.png" width="150" height="100">
+    <nav>
+        <a href="home.html"><li>home</li></a>
+        <a href="signup.html"><li>Sign up</li></a>
+        <a href="login.html"><li>Log in</li></a>
+        <a href="#"><li>learn more</li></a>
+        <a href="about.html"><li class="cons">about us</li></a>
+    </nav>
+    <div class="bar">
+    <p>choose your type</p>
+    <i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+    </div>
+   </header>
+
+  <div class="header">
+    <h1>Fantasy Books
+    </h1>
+  </div>
+    <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    <button id="searchButton" class="search-button">&#128269</button>
+    </div>
+  <div class="container">
+        
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Queenofnothing.jpg" alt="Book 1">
+      </div>
+      <div class="book-details">
+        <h2>The Queen of Nothing</h2>
+        <p>Author: Holly Black </p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/26032912-the-queen-of-nothing"
+            target="blank">GoodReads</a>
+        </p>
+
+        <p>Price: 75EGP</p>
+        <button>Add to Cart</button>
+
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Thewickedking.jpg" alt="Book 2"">
+      </div>
+      <div class=" book-details">
+        <h2>The Wicked King</h2>
+        <p>Author: Holly Black </p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/en/book/show/26032887" target="blank">GoodReads</a>
+        </p>
+        <p>Price: 75EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Cruelprince.jpg" alt="book 3">
+      </div>
+      <div class="book-details">
+        <h2>The Cruel Prince</h2>
+        <p>Author: Holly Black</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/26032825-the-cruel-prince"
+            target="blank">GoodReads</a>
+        </p>
+        <p>Price: 75EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Caraval.jpg" alt="Book 4">
+      </div>
+      <div class="book-details">
+        <h2>Caraval</h2>
+        <p>Author: Stephanie Garber</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/en/book/show/27883214" target="blank">GoodReads</a>
+        </p>
+
+        <p>Price: 100EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Legendary.jpg" alt="Book 5">
+      </div>
+      <div class="book-details">
+        <h2>Legendary</h2>
+        <p>Author:Stephanie Garber</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/36329818-legendary"
+            target="blank">GoodReads</a>
+        </p>
+
+        <p>Price: 100EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Finale.jpg" alt="Book 6">
+      </div>
+      <div class="book-details">
+        <h2>Finale</h2>
+        <p>Author: Stephanie Garber</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/40381392-finale" target="blank">GoodReads</a>
+        </p>
+        <p>Price: 100EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Shadowandbone.jpg" alt="Book 7">
+      </div>
+      <div class="book-details">
+        <h2>Shadow and Bone</h2>
+        <p>Author: Leigh Bardugo</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/10194157-shadow-and-bone"
+            target="blank">GoodReads</a>
+        </p>
+        <p>Price: 80EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Siegeandstorm.jpg" alt="Book 8">
+      </div>
+      <div class="book-details">
+        <h2>Siege and Storm</h2>
+        <p>Author: Leigh Bardugo</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/14061955-siege-and-storm"
+            target="blank">GoodReads</a>
+        </p>
+        <p>Price: 80EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Ruinandrising.jpg" alt="Book 9">
+      </div>
+      <div class="book-details">
+        <h2>Ruin and Rising</h2>
+        <p>Author: Leigh Bardugo</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/book/show/14061957-ruin-and-rising"
+            target="blank">GoodReads</a>
+        </p>
+        <p>Price: 80EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Lightlark.jpg" alt="Book 10">
+      </div>
+      <div class="book-details">
+        <h2>LightLark</h2>
+        <p>Author: Alex Aster</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/en/book/show/60310757" target="blank">GoodReads</a>
+        </p>
+        <p>Price: 110EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Nightbane.jpg" alt="Book 11">
+      </div>
+      <div class="book-details">
+        <h2>NightBane</h2>
+        <p>Author: Alex Aster</p>
+        <p>
+          Book Description: <a href="https://www.goodreads.com/en/book/show/58410355" target="blank">GoodReads</a>
+        </p>
+        <p>Price: 110EGP</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp1.jpg" alt="Book12 ">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Philosopher's Stone</h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href=" https://www.goodreads.com/book/show/42844155-harry-potter-and-the-sorcerer-s-stone"target="blank">GoodReads</a>
+</p>
+        <p>Price:150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+      </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp2.jpg" alt="Book13">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Chamber of Secrets</h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href= "https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets"target="blank">GoodReads</a>
+</p>
+        <p>Price: 150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp3.jpg" alt="Book14">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Prisoner of Azkaban </h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href="https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban "target="blank">GoodReads</a>
+</p>
+        <p>Price:150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp4.jpg" alt="Book15 ">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Goblet of Fire</h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href="https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire "target="blank">GoodReads</a>
+</p>
+        <p>Price: 150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp5.jpg" alt="Book16 ">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Order of the Phoenix </h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href="https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix "target="blank">GoodReads</a>
+</p>
+        <p>Price:150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp6.jpg" alt="Book17 ">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Half-Blood Prince </h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href="https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince"target="blank">GoodReads</a>
+</p>
+        <p>Price:150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Hp7.jpg" alt="Book18 ">
+      </div>
+      <div class="book-details">
+        <h2>Harry Potter and the Deathly Hallows </h2>
+        <p>Author: J.K. Rowling</p>
+        <p>Book Description: <a href=" https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows"target="blank">GoodReads</a>
+</p>
+        <p>Price:150EGP </p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Theshadowbetweenus.jpg" alt="Book19 ">
+      </div>
+      <div class="book-details">
+        <h2>The Shadows Between Us </h2>
+        <p>Author: Tricia Levenseller</p>
+        <p>Book Description: <a href="https://www.goodreads.com/en/book/show/35702241" target="blank">GoodReads</a>
+</p>
+        <p>Price: 75EGP</p>
+        <button>Add to Cart</button>
+      </div>
+     </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Thedarknesswithinus.jpg" alt="Book 20">
+      </div>
+      <div class="book-details">
+        <h2>The Darkness Within Us </h2>
+        <p>Author: Tricia Levenseller</p>
+        <p>Book Description: <a href=" https://www.goodreads.com/en/book/show/180634025"target="blank">GoodReads</a>
+</p>
+        <p>Price: 75EGP</p>
+        <button>Add to Cart</button>
+      </div>
+     </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Sixofcrows.jpg" alt="Book 21">
+      </div>
+      <div class="book-details">
+        <h2>Six of Crows </h2>
+        <p>Author: Leigh Bardugo</p>
+        <p>Book Description: <a href="https://www.leighbardugo.com/book/six-of-crows/" target = "blank">GoodReads</a>
+</p>
+        <p>Price: 100EGP </p>
+        <button>Add to Cart</button>
+      </div>
+     </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Crookedkingdom.jpg" alt="Book22 ">
+      </div>
+      <div class="book-details">
+        <h2>Crooked Kingdom </h2>
+        <p>Author: Leigh Bardugo</p>
+        <p>Book Description: <a href=" https://www.goodreads.com/book/show/22299763-crooked-kingdom" target= "blank">GoodReads</a>
+</p>
+        <p>Price: 100EGP</p>
+        <button>Add to Cart</button>
+      </div>
+     </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Ruleofwolves.jpg" alt="Book 23">
+      </div>
+      <div class="book-details">
+        <h2>Rule of Wolves </h2>
+        <p>Author: Leigh Bardugo</p>
+        <p>Book Description: <a href="https://www.goodreads.com/en/book/show/36307674 "target="blank">GoodReads</a>
+</p>
+        <p>Price: 90EGP</p>
+        <button>Add to Cart</button>
+      </div>
+     </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="imgs/Kingofscars.jpg" alt="Book 24">
+      </div>
+      <div class="book-details">
+        <h2>King of Scars </h2>
+        <p>Author: Leigh Bardugo </p>
+        <p>Book Description: <a href="https://www.goodreads.com/en/book/show/36307634 " target="blank">GoodReads</a>
+</p>
+        <p>Price: 90EGP</p>
+        <button>Add to Cart</button>
+      </div>
+     </div>
+  <script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+      var searchInput = document.getElementById('searchInput').value.toLowerCase();
+      var books = document.querySelectorAll('.book');
+      books.forEach(function(book) {
+        var title = book.querySelector('h2').innerText.toLowerCase();
+        var author = book.querySelector('p:nth-child(2)').innerText.toLowerCase();
+        var description = book.querySelector('p:nth-child(3)').innerText.toLowerCase();
+        if (title.includes(searchInput) || author.includes(searchInput) || description.includes(searchInput)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    });
+  </script>  
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <header>
+        <img src="imgs/logo1.png" width="150" height="100">
+        <nav>
+            <a href="home.html"><li>home</li></a>
+            <a href="signup.html"><li>Sign up</li></a>
+            <a href="login.html" ><li>Log in</li></a>
+            <a href="#"><li>learn more</li></a>
+            <a href="about.html" ><li>about us</li></a>
+        </nav>
+        <div class="bar">
+        <p>choose your type</p>
+        <i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+        </div>
+       </header>
+    <main>
+        <div class="layout"></div>
+       <div id="register2"> 
+        <form id="form">
+            <h2>log in</h2><hr>
+            <label>Enter your email:</label>
+            <input class="textbox" id="email" type="email" required>
+            <label>Enter your password:</label>
+            <input class="textbox" id="pass" type="password" min="5" max="12" required>
+            <div class="error"></div>
+            <p>forgot the password?</p>
+            <p>create a new one:</p>
+            <button type="submit" onclick="myfunction2()">get in</button><br><br><hr>
+            <label >or</label>
+            <p>have an account with:</p>
+            <a href="https://www.google.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <div class="change"><p>Don't have an account?</p><a href="signup.html">sign up</a></div>
+        </form>
+    </div>
+</main>
+       <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="adv1.css">
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+  </head>
+  <body>
+    <header>
+      <img src="imgs/logo1.png" width="150" height="100">
+      <nav>
+          <a href="home.html"><li>home</li></a>
+          <a href="signup.html"><li>Sign up</li></a>
+          <a href="login.html"><li>Log in</li></a>
+          <a href="#"><li>learn more</li></a>
+          <a href="about.html" ><li>about us</li></a>
+      </nav>
+      <div class="bar">
+      <p>choose your type</p>
+      <i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+      </div>
+     </header>
+    <!-- start adventur section -->
+    
+    <section id="Adventur-books">
+      
+      <div class="center-text">
+        <h2><p class="title"><span>Adventure </span>Books</p> </h2>
+        <button id="toggle-mode">SHTEME</button>
+        <!-- dark mode js -->
+        <script>
+  const toggleModeButton = document.getElementById('toggle-mode');
+  const body = document.body;
+
+  toggleModeButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+  });
+</script>
+<!-- end dark mode -->
+      </div>
+      <div class="categories-contenir">
+        <!-- book1 -->
+        <div class="box">
+         <img src="imgs/ad1.jpg" alt="WARRIORS">
+         <div class="book-text">
+        <a href="#"><h4>Add</h4></a>
+         </div>
+         <div class="read-icon">
+             <a  target="_blank"href="https://www.amazon.com/Warriors-Starless-Clan-4-Thunder/dp/0063050277?asin=0063050277&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+           </div>
+           <div class="ratting">
+            <i class='bx bxs-star'></i>
+             <i class='bx bxs-star'></i>
+             <i class='bx bx-star'></i>
+             <i class='bx bxs-star-half' ></i>
+          </div>
+
+          <div class="price">
+            <h4>WARRIORS</h4>
+            <p>$16.99<span class="line" ><del>$21</del></span></p>
+          </div>
+        </div>
+        <!-- book2 -->
+        <div class="box">
+         <img src="imgs/ad2.jpg" alt="THE SECRET GERDEN">
+         <div class="book-text">
+          <a href="#"><h4>Add</h4></a>
+         </div>
+         <div class="read-icon">
+             <a  target="_blank"href="https://www.amazon.com/Secret-HarperClassics-Frances-Hodgson-Burnett/dp/006440188X?asin=006440188X&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+           </div>
+           <div class="ratting">
+             <i class='bx bx-star'></i>
+             <i class='bx bx-star'></i>
+             <i class='bx bx-star'></i>
+          </div>
+          <div class="price">
+            <h4>THE SECRET GERDEN</h4>
+            <p>$14 <span class="line" ><del>$20</del></span>  </p>
+          </div>
+        </div>
+      <!-- book3 -->
+      <div class="box">
+       <img src="imgs/ad3.jpg" alt="SHERLOK HOLMES">
+       <div class="book-text">
+        <a href="#"><h4>Add</h4></a>
+       </div>
+       <div class="read-icon">
+           <a  target="_blank"href="https://www.amazon.com/Lost-City-Deadly-Obsession-Amazon/dp/1400078458?asin=1400078458&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+        </div>
+         <div class="ratting">
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star'></i>
+           <i class='bx bxs-star-half'></i>
+        </div>
+        <div class="price">
+          <h4>SHERLOK HOLMES</h4>
+          <p>$17<span class="line" ><del>$25</del></span></p>
+        </div>
+      </div>
+    <!-- book4 -->
+    <div class="box">
+     <img src="imgs/ad4.jpg" alt="INTO THE CARPATHIANS">
+     <div class="book-text">
+       <a href="#"><h4>Add</h4></a>
+     </div>
+     <div class="read-icon">
+         <a  target="_blank"href="https://www.amazon.com/dp/1633931536/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=A0YSKYEpDB&asin=B087W5BRR8&revisionId=c61989e0&format=2&depth=1"><i class='bx bx-book-reader'></i></a>
+       </div>
+       <div class="ratting">
+         <i class='bx bx-star'></i>
+         <i class='bx bx-star'></i>
+         <i class='bx bx-star'></i>
+         <i class='bx bxs-star-half' ></i>
+      </div>
+      <div class="price">
+        <h4>INFO THE CARPATHIANS</h4>
+        <p>$13<span class="line" ><del>$19.99</del></span></p>
+      </div>
+    </div>
+  <!-- book5 -->
+  <div class="box">
+   <img src="imgs/ad5.jpg" alt="THE TURN OF THE SCREW">
+   <div class="book-text">
+     <a href="#"><h4>Add</h4></a>
+   </div>
+   <div class="read-icon">
+       <a  target="_blank"href="https://www.amazon.com/Turn-Screw-Henry-James/dp/1612930999?asin=1612930999&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+     </div>
+     <div class="ratting">
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+       <i class='bx bxs-star-half' ></i>
+    </div>
+    <div class="price">
+      <h4>THE TURN OF THE SCREW</h4>
+      <p>$19<span class="line" ><del>$25</del></span></p>
+    </div>
+  </div>
+<!-- book6 -->
+<div class="box">
+ <img src="imgs/ad6.jpg" alt="BILLY AND THE GIANT">
+ <div class="book-text">
+  <a href="#"><h4>Add</h4></a>
+ </div>
+ <div class="read-icon">
+     <a  target="_blank"href="https://www.amazon.com/Billy-Giant-Adventure-Jamie-Oliver-ebook/dp/B0C2BQJBDN?asin=B0C2BQJBDN&revisionId=758fbd8f&format=1&depth=1"><i class='bx bx-book-reader'></i></a>
+   </div>
+   <div class="ratting">
+     <i class='bx bx-star'></i>
+     <i class='bx bx-star'></i>
+     <i class='bx bx-star'></i>
+     <i class='bx bx-star'></i>
+  </div>
+  <div class="price">
+    <h4>BILLY AND THE GIANT</h4>
+    <p>$12<span class="line" ><del>$18.99</del></span></p>
+  </div>
+</div>
+<!-- book7 -->
+<div class="box">
+ <img src="imgs/ad7.jpg" alt="HEART OF TBE SEA">
+ <div class="book-text">
+   <a href="#"><h4>Add</h4></a>
+ </div>
+ <div class="read-icon">
+     <a  target="_blank"href="https://www.amazon.com/Heart-Sea-Tragedy-Whaleship-Essex/dp/0141001828?asin=0141001828&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+   </div>
+   <div class="ratting">
+    <i class='bx bxs-star'></i>
+     <i class='bx bx-star'></i>
+     <i class='bx bx-star'></i>
+     <i class='bx bx-star'></i>
+     <i class='bx bxs-star-half' ></i>
+  </div>
+  <div class="price">
+    <h4>HEART OF TBE SEA</h4>
+    <p>$20.99<span class="line" ><del>$26</del></span></p>
+  </div>
+</div>
+<!-- book8 -->
+<div class="box">
+ <img src="imgs/ad8.jpg" alt="ADVENTURE">
+ <div class="book-text">
+   <a href="#"><h4>Add</h4></a>
+ </div>
+ <div class="read-icon">
+     <a  target="_blank"href="https://www.amazon.com/Adventures-Huckleberry-Finn-Mark-Twain/dp/1503214958?asin=1503214958&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+   </div>
+   <div class="ratting">
+     <i class='bx bx-star'></i>
+     <i class='bx bxs-star-half' ></i>
+  </div>
+  <div class="price">
+    <h4>ADVENTURE</h4>
+    <p>$15<span class="line" ><del>$20</del></span></p>
+  </div>
+</div>
+<!-- book9 -->
+<div class="box">
+ <img src="imgs/ad9.jpg" alt="THE LOST CITY">
+ <div class="book-text">
+ <a href="#"><h4>Add</h4></a>
+ </div>
+ <div class="read-icon">
+    <a  target="_blank"href="https://www.amazon.com/Lost-City-Deadly-Obsession-Amazon/dp/1400078458?asin=1400078458&revisionId=&format=4&depth=1"><i class='bx bx-book-reader'></i></a>
+   </div>
+   <div class="ratting">
+     <i class='bx bxs-star'></i>
+     <i class='bx bxs-star'></i>
+     <i class='bx bxs-star'></i>
+     <i class='bx bx-star'></i>
+     <i class='bx bxs-star-half' ></i>
+  </div>
+  <div class="price">
+    <h4>THE LOST CITY</h4>
+    <p>$14<span class="line" ><del>$21</del></span></p>
+  </div>
+</div>
+      </div>
+      <div >
+        <p class="DD">VEDIO TELL WE  WAHTE IS THE ADVENTURE: </p>
+        <video controls>
+          <source src="videos\vdio.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+  </body>
+</html>

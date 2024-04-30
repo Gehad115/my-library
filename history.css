@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(63, 90, 117);}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    color: aliceblue;
+    letter-spacing: 1px;
+    text-decoration: underline ;
+    margin-top: 100px;
+} 
+ h1:hover{
+      transform: scale(2); }
+ 
+.div1,.div2,.div3,.div4,.div5,.div6,.div7,
+.div9,.div10,.div11,.div12,.div13,.div14,
+.div15,.div16,.div17,.div18,.div19{
+    margin: 50px 100px;
+    display: inline-block;
+    height: 600px;
+    width: 250px;
+    border: 2px solid black;
+    padding:3px;
+    background-image:linear-gradient(to top right, rgb(229, 221, 221),rgb(118, 106, 106));
+    border-radius:10px;
+}
+.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img9,.img10,.img11,.img12,.img13,.img14,.img15,.img16,.img17,.img18,.img19{ 
+    height:400px;
+    width:100%;
+     }
+     /*.div1,.div2,.div3,.div4,.div5,.div6,.div7,
+     .div9,.div10,.div11,.div12,.div13,.div14,
+     .div15,.div16,.div17,.div18,.div19:hover{
+    transform: scale(1.2);
+}*/
+.p1,.p2,.p3,.p4,.p5,.p6,.p7,.p9,.p10,.p11,.p12,.p13,.p14,.p15,.p16,.p17,.p18,.p19,.adventure1{
+   margin: 5px 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+}
+.span1,.span2,.span4,.span3,.span6,.span5,.span7,.span9,.span10,.span11,.span12,.span13,.span14,.span15,.span16,.span17,.span18,.span19{
+    color: rgb(10, 62, 182);
+    font-size: large;
+  
+    
+}
+.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18,.a19{
+    display:block;
+    margin: 10PX 80PX;
+    button{ width: 90px; height:30px;}
+}
+
+
+button:hover{
+    background-color: #1c507b;
+    color:white;
+}
+.adventure{
+    background-image: linear-gradient(to right,white,grey,rgb(15, 71, 154));
+    width: 60%; height: 250px;
+    margin: 100px 250px;
+    video{
+        width: 80%;
+        display: block;
+        margin: auto;height: 170px;
+        
+    }
+    .btn-close{
+        display: block;
+        width: 80px;
+        height: 30px; 
+        margin: 20px 330px;
+    }}
+
+    

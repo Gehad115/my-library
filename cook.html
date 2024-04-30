@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cook.css">
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Bookstore</title>
+</head>
+
+<body>
+  <header>
+    <img src="imgs/logo1.png" width="150" height="100">
+    <nav>
+        <a href="home.html"><li>home</li></a>
+        <a href="signup.html"><li>Sign up</li></a>
+        <a href="login.html"><li>Log in</li></a>
+        <a href="#"><li>learn more</li></a>
+        <a href="about.html" ><li>about us</li></a>
+    </nav>
+    <div class="bar">
+    <p>choose your type</p>
+    <i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+    </div>
+   </header>
+  <div class="header">
+    <h1>cookbooks & food</h1>
+    <div class="fish">
+      <h2> find your flavor </h2>
+      <h3> 𓆝 𓆟 𓆞 𓆝 𓆟 𓆞 𓆝 𓆟 𓆞 </h3>
+    </div>
+  </div>
+  <div class="search">
+    <form action="#" class="searchbar">
+      <input type="text" placeholder="search anybook" name="q" id="searchInput" >
+      <button type="submit"> <i class="fa-solid fa-magnifying-glass ser"> </i> </button>
+    </form>
+  </div>
+
+  <div class="book-list">
+    <div class="book">
+      <img src="images/book 1.webp" alt="Book Cover">
+      <div class="book-info">
+        <h3> <a href="https://archive.org/embed/plentyvibrantveg00otto"> Plenty: Vibrant Vegetable Recipes from London's
+            Ottolenghi </a> </h3>
+        <p>by Yotam Ottolenghi, Jonathan Lovekin (Photographer)</p>
+        <p>Rating:
+        <p class="star"> ★★★★☆ </p>
+        </p>
+        <p>Price: $31.49</p>
+        <button class="add-to-cart"> Add to cart </button>
+      </div>
+    </div>
+    <div class="book">
+      <img src="images/book 2.jpg" alt="Book Cover">
+      <div class="book-info">
+        <h3> <a href="#"> PlantYou: 140+ Ridiculously Easy, Amazingly Delicious Plant-Based Oil-Free Recipes </a> </h3>
+        <p>by Carleigh Bodrug</p>
+        <p>Rating:
+        <p class="star"> ★★★★☆ </p>
+        </p>
+        <p>Price: $14.34</p>
+        <button class="add-to-cart"> Add to cart </button>
+      </div>
+    </div>
+    <div class="book">
+      <img src="images/book 3.jpg" alt="Book Cover">
+      <div class="book-info">
+        <h3> <a href="https://archive.org/embed/completevegetari0000unse_h8x6 "> The Complete Vegetarian Cookbook: A
+            Fresh Guide to Eating Well with 700 Foolproof Recipes </a> </h3>
+        <p>by America's Test Kitchen (Editor)</p>
+        <p>Rating:
+        <p class="star"> ★★★★☆ </p>
+        </p>
+        <p>Price: $12.3</p>
+        <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 4...jpg" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> Big Vegan Flavor: Techniques and 150 Recipes to Master Vegan Cooking </a> </h3>
+          <p>by Nisha Vora</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $16.32</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 5.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> Cooking from the Spirit: Easy, Delicious, and Joyful Plant-Based Inspirations </a> </h3>
+          <p>by Tabitha Brown</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $13.99</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+    </div>
+    <div class="book-list">
+      <div class="book">
+        <img src="images/book 6.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> The Everything Gluten-Free & Dairy-Free Cookbook: 300 Simple and Satisfying Recipes without
+              Gluten or Dairy </a> </h3>
+          <p> by Audrey Roberts</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $5.00</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 7.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> French Lessons: Adventures with Knife, Fork, and Corkscrew </a> </h3>
+          <p>by Peter Mayle</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $16.32</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 8.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> One More Croissant for the Road </a> </h3>
+          <p>by Felicity Cloake</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: ₹12.33</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 9.jpg" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> Let's Eat: 101 Recipes to Fill Your Heart & Home </a> </h3>
+          <p>by Dan Pelosi</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $30.00</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 10.jpg" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> Blackstone Outdoor Gas Griddle Cookbook with Pictures: 1000 Days Quick and Easy Grill
+              Recipes
+              with Pro Tips </a> </h3>
+          <p>by Willie Spencer</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $21.67</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+    </div>
+    <div class="book-list">
+      <div class="book">
+        <img src="images/book 11.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> Meathead: The Science of Great Barbecue and Grilling </a> </h3>
+          <p>by Meathead Goldwyn, Rux Martin</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $19.24</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 12.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#"> Traeger Grill Bible: The Complete Wood Pellet Grill</a> </h3>
+          <p>by Eula J Nelson</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $18.12</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 13.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#">The Unofficial Yellowstone Cookbook: Recipes Inspired by the Dutton Family Ranch</a> </h3>
+          <p>by Jackie Alpers</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $22.36 </p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 14.jpg" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#">The Bob's Burgers Burger Book: Real Recipes for Joke Burgers </a> </h3>
+          <p>by Loren Bouchard</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $16.94</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <div class="book">
+        <img src="images/book 15.webp" alt="Book Cover">
+        <div class="book-info">
+          <h3> <a href="#">The Outdoor Kitchen: Live-Fire Cooking from the Grill [A Cookbook]</a> </h3>
+          <p>by Eric Werner, Nils Bernstein</p>
+          <p>Rating:
+          <p class="star"> ★★★★☆ </p>
+          </p>
+          <p>Price: $35.00</p>
+          <button class="add-to-cart"> Add to cart </button>
+        </div>
+      </div>
+      <!-- End of book block -->
+    </div>
+    <div class="footer">
+      <p> 2024 BOOKS</p>
+    </div>
+    <script src="main.js"> </script>
+</body>
+
+</html>

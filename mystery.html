@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<head>
+  <title>MysteryBooks</title>
+    <meta charset="UTF-8">
+    <title>Mystery Books</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        body {
+            font-family: serif, Playfair Display;
+            background : url("../imgs/15609c5d03e5e98d73342b7f0bf4e858.jpg");
+            text-align : center;
+            align-items: center;
+            justify-content : center ;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background: url("../imgs/Lasthead.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            height: 400px;
+            border-radius :20px;
+            margin-bottom : 10px ;
+            font-size : 40px;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+            color : #e8d6c8;
+        }
+        
+        .search-container {
+      text-align: center;
+      margin-bottom: 10px;
+      box-sizing: border-box ;
+      width : 100%;
+      
+    }
+
+    .search-input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 30px;
+      height : 70px;
+      width: 90%;
+      box-sizing: border-box ;
+      display : inline-block ;
+      justify-content: center;
+      align-items: center ;
+      margin-right : 5px;
+    }
+
+    .search-button {
+      padding: 10px 10px;
+      border-radius: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      background-color:#a68e7c;
+      border: none;
+      height : 70px;
+      width : 7%;
+      box-sizing: border-box ;
+      text-align : center;
+      display : inline-block;
+      
+    }
+
+    .search-button:hover {
+      background-color: #45a049;
+    }
+    .container {
+       display : grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-gap : 10px;
+       margin: 0;
+       padding : 0px 20px;
+       max-width: 100vw;
+       position : relative ;
+       }
+    .book {
+            background: transparent;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            width : 400px;
+            height : 600px;
+            position : relative ;
+            z-index : 1;
+            perspective :1000px ;
+            justify-content : center;
+            align-items : center;
+            align-items : center;
+            
+        }
+    .book img {
+            width: 100%;
+            height: 400px;
+            display: block;
+            margin: auto;
+            border-radius : 20px;
+          
+        }
+   .book h2 {
+      text-align: center;
+      font-size : 30px;
+        }
+    .book p {
+      text-align: center;
+      font-size : 25px;
+        }
+    
+        
+   .book .front,
+   .book .back {
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      width : 400px;
+      height : 600px;
+      border-radius: 20px;  
+      justify-content : center ;
+      align-items : center ;
+      padding : 20px;
+      perspective : 1000px;
+      transform-style: preserve-3d;
+    
+        }
+
+        
+  .book .front {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background : url("806ef5f84d8789fbda0c40fb43ff61be.jpg"); 
+      transition: transform 0.6s ease;
+      text-align : center ;
+      color : #212121;
+      z-index: 2;
+       }
+
+  .book .back {
+     background: url("../imgs/5f4fce7787dc2fa0344828332cdedad6.jpg");
+     background-size : cover;
+     background-position : center;
+     padding: 20px;
+     transform: rotateY(180deg);
+     text-align : left;
+     top: 0;
+     
+     display : flex;
+     flex-direction : column;
+     color : #fcf4ed ;
+     font-style: italic ;
+     z-index:1;
+     overflow: hidden;
+
+  }
+    .book .back p{
+      margin-bottom: 2px;
+      font-size: 19px;
+      font-weight:bold ;
+    }
+    .book .back button {
+      width: 350px;
+      height: 50px;
+      border-radius : 20px;
+      font-size : 20px;
+      color : #a68e7c;
+      
+      }
+        
+  .book:hover .front {
+    transform: rotateY(180deg);
+        } 
+  .back {
+    transform : rotateY(180deg);
+  
+  }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="imgs/logo1.png" width="150" height="100">
+    <nav>
+        <a href="home.html"><li>home</li></a>
+        <a href="signup.html"><li>Sign up</li></a>
+        <a href="login.html"><li>Log in</li></a>
+        <a href="#"><li>learn more</li></a>
+        <a href="about.html" ><li>about us</li></a>
+    </nav>
+    <div class="bar">
+    <p>choose your type</p>
+    <i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+    </div>
+   </header>
+    <div class = "header">
+      <h1>
+         Mystery Books
+      </h1>
+      
+    </div>
+    <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Looking for..."><button id="searchButton" class="search-button">&#128269</button>
+    </div>
+    <div class="container">
+      <div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Agggtm.jpg" alt="Book 1 ">
+      </div>
+      <div class="book-details">
+        <h2>A Good Girl's Guide to Murder</h2>
+        <p>Author: Holly Jackson</p>
+        <p>Price: 150EGP</p>
+      </div>
+     <div class ="back"> 
+       <p>Book Description: Everyone in Fairview knows the story.
+
+Pretty and popular high school senior Andie Bell was murdered by her boyfriend, Sal Singh, who then killed himself. It was all anyone could talk about. And five years later, Pip sees how the tragedy still haunts her town.
+
+But she can't shake the feeling that there was more to what happened that day. She knew Sal when she was a child, and he was always so kind to her. How could he possibly have been a killer?
+
+Now a senior herself, Pip decides to reexamine the closed case for her final project, at first just to cast doubt on the original investigation. But soon she discovers a trail of dark secrets that might actually prove Sal innocent . . . and the line between past and present begins to blur. Someone in Fairview doesn't want Pip digging around for answers, and now her own life might be in danger.</p>
+       
+<button><a href="">Add to Cart</a></button>
+       
+       
+ 
+       
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Ggbb.jpg" alt="Book2 ">
+      </div>
+      <div class="book-details">
+        <h2>Good Girl, Bad Blood</h2>
+        <p>Author: Holly Jackson</p>
+        <p>Price: 150EGP</p>
+      </div>
+     <div class ="back"> 
+       <p>Book Description: Pip is not a detective anymore.
+
+With the help of Ravi Singh, she released a true-crime podcast about the murder case they solved together last year. The podcast has gone viral, yet Pip insists her investigating days are behind her.
+
+But she will have to break that promise when someone she knows goes missing. Jamie Reynolds has disappeared, on the very same night the town hosted a memorial for the sixth-year anniversary of the deaths of Andie Bell and Sal Singh.
+
+The police won't do anything about it. And if they won't look for Jamie then Pip will, uncovering more of her town's dark secrets along the way... and this time everyone is listening. But will she find him before it's too late?</p>
+<button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Agad.jpg" alt="Book3 ">
+      </div>
+      <div class="book-details">
+        <h2>As Good As Dead</h2>
+        <p>Author: Holly Jackson</p>
+        <p>Price: 150EGP </p>
+      </div>
+     <div class ="back"> 
+       <p>Book Description:Pip is about to head to college, but she is still haunted by the way her last investigation ended. She’s used to online death threats in the wake of her viral true-crime podcast, but she can’t help noticing an anonymous person who keeps asking her: Who will look for you when you’re the one who disappears?
+
+Soon the threats escalate and Pip realizes that someone is following her in real life. When she starts to find connections between her stalker and a local serial killer caught six years ago, she wonders if maybe the wrong man is behind bars.
+
+Police refuse to act, so Pip has only one choice: find the suspect herself—or be the next victim. As the deadly game plays out, Pip discovers that everything in her small town is coming full circle... and if she doesn’t find the answers, this time she will be the one who disappears... </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Fs.jpg" alt="Book4 ">
+      </div>
+      <div class="book-details">
+        <h2>Five Survive </h2>
+        <p>Author: Holly Jackson</p>
+        <p>Price: 150EGP </p>
+      </div>
+     <div class ="back"> 
+       <p>Book Description: Eighteen year old Red and her friends are on a road trip in an RV, heading to the beach for Spring Break. It’s a long drive but spirits are high. Until the RV breaks down in the middle of nowhere. There’s no mobile phone reception and nobody around to help. And as the wheels are shot out, one by one, the friends realise that this is no accident. There’s a sniper out there in the dark watching them and he knows exactly who they are. One of the group has a secret that the sniper is willing to kill for. 
+
+A game of cat-and-mouse plays out as the group desperately tries to get help and to work out which member of the group is the target. Buried secrets are forced to light in the cramped, claustrophobic setting of the RV, and tensions within the group will reach deadly levels. Not everyone will survive the night.</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Tdvc.jpg" alt="Book 5">
+      </div>
+      <div class="book-details">
+        <h2>The Da Vinci Code</h2>
+        <p>Author:Dan Brown </p>
+        <p>Price: 200EGP</p>
+      </div>
+     <div class ="back"> 
+       <p>Book Description:While in Paris, Harvard symbologist Robert Langdon is awakened by a phone call in the dead of the night. The elderly curator of the Louvre has been murdered inside the museum, his body covered in baffling symbols. As Langdon and gifted French cryptologist Sophie Neveu sort through the bizarre riddles, they are stunned to discover a trail of clues hidden in the works of Leonardo da Vinci—clues visible for all to see and yet ingeniously disguised by the painter.
+
+Even more startling, the late curator was involved in the Priory of Sion—a secret society whose members included Sir Isaac Newton, Victor Hugo, and Da Vinci—and he guarded a breathtaking historical secret. Unless Langdon and Neveu can decipher the labyrinthine puzzle—while avoiding the faceless adversary who shadows their every move—the explosive, ancient truth will be lost forever. </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Tsp.jpg" alt="Book 6">
+      </div>
+      <div class="book-details">
+        <h2>The Silent Patient</h2>
+        <p>Author: Alex Michaelides</p>
+        <p>Price: 80EGP </p>
+      </div>
+     <div class ="back"> 
+       <p>Book Description: Alicia Berenson’s life is seemingly perfect. A famous painter married to an in-demand fashion photographer. One evening her husband Gabriel returns home late from a fashion shoot, and Alicia shoots him five times in the face, and then never speaks another word.
+
+Theo Faber is a criminal psychotherapist who has waited a long time for the opportunity to work with Alicia. His determination to get her to talk and unravel the mystery of why she shot her husband takes him down a twisting path into his own motivations—a search for the truth that threatens to consume him....</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Motoe.jpg" alt="Book 7">
+      </div>
+      <div class="book-details">
+        <h2>Murder On the Orient Express </h2>
+        <p>Author: Agatha Christie</p>
+        <p>Price: 250EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description:Just after midnight, a snowdrift stops the famous Orient Express in its tracks as it travels through the mountainous Balkans. The luxurious train is surprisingly full for the time of the year but, by the morning, it is one passenger fewer. An American tycoon lies dead in his compartment, stabbed a dozen times, his door locked from the inside.
+
+One of the passengers is none other than detective Hercule Poirot. On vacation. 
+
+Isolated and with a killer on board, Poirot must identify the murderer—in case he or she decides to strike again. </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Tsh.jpg" alt="Book8 ">
+      </div>
+      <div class="book-details">
+        <h2>The secret History </h2>
+        <p>Author: Donna Tart</p>
+        <p>Price: 100EGP </p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description:Under the influence of their charismatic classics professor, a group of clever, eccentric misfits at an elite New England college discover a way of thinking and living that is a world away from the humdrum existence of their contemporaries. But when they go beyond the boundaries of normal morality they slip gradually from obsession to corruption and betrayal, and at last—inexorably—into evil. </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Mstsk.jpg" alt="Book 9">
+      </div>
+      <div class="book-details">
+        <h2>My Sister, the Serial Killer </h2>
+        <p>Author: Oyinkan Braithewaite</p>
+        <p>Price: 80EGP </p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description:When Korede's dinner is interrupted one night by a distress call from her sister, Ayoola, she knows what's expected of her: bleach, rubber gloves, nerves of steel and a strong stomach. This'll be the third boyfriend Ayoola's dispatched in, quote, self-defence and the third mess that her lethal little sibling has left Korede to clear away. She should probably go to the police for the good of the menfolk of Nigeria, but she loves her sister and, as they say, family always comes first. Until, that is, Ayoola starts dating the doctor where Korede works as a nurse. Korede's long been in love with him, and isn't prepared to see him wind up with a knife in his back: but to save one would mean sacrificing the other...
+ </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Motl.jpg" alt="Book10 ">
+      </div>
+      <div class="book-details">
+        <h2>The Murder on the Links </h2>
+        <p>Author: Agatha Christie</p>
+        <p>Price: 200EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description: When Hercule Poirot and his associate Arthur Hastings arrive in the French village of Merlinville-sur-Mer to meet their client Paul Renauld, they learn from the police that he has been found that morning stabbed in the back with a letter opener and left in a newly-dug grave adjacent to a local golf course.
+
+Among the plausible suspects are Renauld's wife Eloise, his son Jack, Renauld's immediate neighbor Madame Daubreuil, the mysterious "Cinderella" of Hasting's recent acquaintance, and some unknown visitor of the previous day--all of whom Poirot has reason to suspect. Poirot's powers of investigation ultimately triumph over the wiles of an assailant whose misdirection and motives are nearly--but not quite--impossible to spot.</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Gwtdt.jpg" alt="Book 11">
+      </div>
+      <div class="book-details">
+        <h2>The Girl with the Dragon Tattoo </h2>
+        <p>Author: Stieg Larsson</p>
+        <p>Price: 90EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description: Harriet Vanger, a scion of one of Sweden’s wealthiest families disappeared over forty years ago. All these years later, her aged uncle continues to seek the truth. He hires Mikael Blomkvist, a crusading journalist recently trapped by a libel conviction, to investigate. He is aided by the pierced and tattooed punk prodigy Lisbeth Salander. Together they tap into a vein of unfathomable iniquity and astonishing corruption.
+
+An international publishing sensation, Stieg Larsson’s The Girl with the Dragon Tattoo combines murder mystery, family saga, love story, and financial intrigue into one satisfyingly complex and entertainingly atmospheric novel.</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Cap.jpg" alt="Book12 ">
+      </div>
+      <div class="book-details">
+        <h2>Crime and Punishment </h2>
+        <p>Author: Fyodor Dostoyevsky </p>
+        <p>Price: 250EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description: Raskolnikov, a destitute and desperate former student, wanders through the slums of St Petersburg and commits a random murder without remorse or regret. He imagines himself to be a great man, a Napoleon: acting for a higher purpose beyond conventional moral law. But as he embarks on a dangerous game of cat and mouse with a suspicious police investigator, Raskolnikov is pursued by the growing voice of his conscience and finds the noose of his own guilt tightening around his neck. Only Sonya can offer the chance of redemption.</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Wtcs.jpg" alt="Book13 ">
+      </div>
+      <div class="book-details">
+        <h2>Where the Crawdads Sing </h2>
+        <p>Author: Delia Owens</p>
+        <p>Price: 100EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description:For years, rumors of the “Marsh Girl” haunted Barkley Cove, a quiet fishing village. Kya Clark is barefoot and wild; unfit for polite society. So in late 1969, when the popular Chase Andrews is found dead, locals immediately suspect her.
+
+But Kya is not what they say. A born naturalist with just one day of school, she takes life's lessons from the land, learning the real ways of the world from the dishonest signals of fireflies. But while she has the skills to live in solitude forever, the time comes when she yearns to be touched and loved. Drawn to two young men from town, who are each intrigued by her wild beauty, Kya opens herself to a new and startling world—until the unthinkable happens.
+ </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/So.jpg" alt="Book14 ">
+      </div>
+      <div class="book-details">
+        <h2>Sharp Objects </h2>
+        <p>Author: Gillian Flynn</p>
+        <p>Price: 90EGP </p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description:Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the unsolved murder of a preteen girl and the disappearance of another. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming. </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Tgott.jpg" alt="Book15 ">
+      </div>
+      <div class="book-details">
+        <h2>The Girl on the Train </h2>
+        <p>Author: Paula Hawkins</p>
+        <p>Price: 90EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description:Rachel catches the same commuter train every morning. She knows it will wait at the same signal each time, overlooking a row of back gardens. She’s even started to feel like she knows the people who live in one of the houses. “Jess and Jason,” she calls them. Their life—as she sees it—is perfect. If only Rachel could be that happy. And then she sees something shocking. It’s only a minute until the train moves on, but it’s enough. Now everything’s changed. Now Rachel has a chance to become a part of the lives she’s only watched from afar. Now they’ll see; she’s much more than just the girl on the train... </p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Tcsh.jpg" alt="Book16 ">
+      </div>
+      <div class="book-details">
+        <h2>The Complete Sherlock Holmes </h2>
+        <p>Author: Sir Arthur Conan Doyle</p>
+        <p>Price: 300EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description: The Complete Sherlock Holmes is the only complete edition of these famous stories. Originally published in nine separate books, containing thirteen hundred pages of the best detective fiction in English literature, they are the authoratative text of every Sherlock Holmes story even written.</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Tbitl.jpg" alt="Book17 ">
+      </div>
+      <div class="book-details">
+        <h2>The Body in the Library</h2>
+        <p>Author: Agatha Christie</p>
+        <p>Price: 200EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description: It’s seven in the morning. The Bantrys wake to find the body of a young woman in their library. She is wearing evening dress and heavy make-up, which is now smeared across her cheeks.
+
+But who is she? How did she get there? And what is the connection with another dead girl, whose charred remains are later discovered in an abandoned quarry?
+
+The respectable Bantrys invite Miss Marple to solve the mystery… before tongues start to wag.
+</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+<div class="book">
+     <div class="front">
+      <div class="book-image">
+        <img src="imgs/Attwn.jpg" alt="Book 18">
+      </div>
+      <div class="book-details">
+        <h2>And Then There Were None </h2>
+        <p>Author: Agatha Christie</p>
+        <p>Price: 200EGP</p>
+        
+      </div>
+     <div class ="back"> 
+       <p>Book Description: First, there were ten—a curious assortment of strangers summoned as weekend guests to a little private island off the coast of Devon. Their host, an eccentric millionaire unknown to all of them, is nowhere to be found. All that the guests have in common is a wicked past they're unwilling to reveal—and a secret that will seal their fate. For each has been marked for murder. A famous nursery rhyme is framed and hung in every room of the mansion.When they realize that murders are occurring as described in the rhyme, terror mounts. One by one they fall prey. Before the weekend is out, there will be none. Who has choreographed this dastardly scheme? And who will be left to tell the tale? Only the dead are above suspicion.</p>
+       <button><a href="">Add to Cart</a></button>
+     </div>
+     </div>
+     </div>
+  </div>
+  <script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+      var searchInput = document.getElementById('searchInput').value.toLowerCase();
+      var books = document.querySelectorAll('.book');
+      books.forEach(function(book) {
+        var title = book.querySelector('h2').innerText.toLowerCase();
+        var author = book.querySelector('p:nth-child(2)').innerText.toLowerCase();
+        var description = book.querySelector('p:nth-child(3)').innerText.toLowerCase();
+        if (title.includes(searchInput) || author.includes(searchInput) || description.includes(searchInput)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    });
+  </script>  
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title> comic books </title>
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+  </head>
+
+
+<body>
+	<header>
+		<img src="imgs/logo1.png" width="150" height="100">
+		<nav>
+			<a href="home.html"><li>home</li></a>
+			<a href="signup.html"><li>Sign up</li></a>
+			<a href="login.html"><li>Log in</li></a>
+			<a href="#"><li>learn more</li></a>
+			<a href="about.html"><li class="cons">about us</li></a>
+			<div class="search-container">
+		</nav>
+		<div class="bar">
+		<p>choose your type</p>
+		<i id="bar-list" onclick="myfunction1()"  class="fa-solid fa-bars"></i>
+		</div>
+	   </header>
+	   
+       <div class="search-container">
+		<input type="text" id="searchInput" placeholder="Search...">
+		<button onclick="search()">Search</button>
+	  </div>
+			  
+			  <div id="searchResults">
+				</div>
+	
+
+
+<h1>
+	<div class="image-container">
+	  <img src="imgs/Blue Red Yellow Illustrated Superhero Comic Birthday Invitation (3).png" alt="Example Image" class = "hhh">
+	</div>
+</h1>
+<div class = "yarab">
+	<div class = "box">
+		<a href = "https://americanenglish.state.gov/files/ae/resource_files/zonk_2		_full_v1.pdf"><img src = "imgs/zonk.png"></a>
+	<h3> Zonk </h3>
+	<p> 100 LE </p>
+ <button class="button">Add to cart</button>
+	</div>
+
+
+	<div class = "box">
+		<a href = "https://archive.org/details/871-amazing-spiderman/878%20amazing%		20spiderman/"><img src = "imgs/spiderman.png"></a>
+<h3> Spider-man </h3>
+<p> 100 LE </p>	
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://w7.read-attackontitan-manga.com/manga/attack-on-titan-		chapter-1/"><img src = "imgs/aot.jpg"></a>
+<h3> Attack On Titan </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href ="https://kids.scholastic.com/content/dam/scholastic/kids/pdf/Book%		20Excerpts/Ghosts%20Book%201%20Excerpt.pdf"><img src = "imgs/ghosts.png"></a>
+<h3> Ghosts </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://ncert.nic.in/pdf/Comic_Book/Comic_book_English.pdf"><img 		src = "imgs/letsmoveforward.png"></a>
+<h3> Let's Move Forward </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://archive.org/details/orangecompleteco0000taka"><img src = "imgs/orange.jpg"></a>
+<h3> Silent Enemy </h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "https://www.arvindguptatoys.com/arvindgupta/rbi-comic.pdf"><img 		src = "imgs/raju.png"></a>
+<h3>Raju And The Money Tree</h3>
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+
+	<div class = "box">
+		<a href = "file:///C:/Users/habib/Downloads/Manga_Death_Note.pdf"><img src 		= "imgs/deathnote.png"></a>
+<h3>Death Note</h3>
+
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+<div class = "box">
+		<a href = "https://ia600600.us.archive.org/7/items/manga_Kimi_no_Na_wa/Kimi%20no%20Na%20wa%20%5BYen%20Press%5D.pdf"><img src= "imgs/yourname.webp"></a>
+<h3>Your Name</h3>
+
+<p> 100 LE </p>
+<button class="button">Add to cart</button>
+	</div>
+
+
+</div>
+
+<script>
+function search() {
+  var input, filter, container, box, h3, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  container = document.getElementsByClassName("yarab")[0];
+  box = container.getElementsByClassName("box");
+
+  for (i = 0; i < box.length; i++) {
+    h3 = box[i].getElementsByTagName("h3")[0];
+    txtValue = h3.textContent || h3.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      box[i].style.display = "";
+    } else {
+      box[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script src="js/index.js"></script>
+    </body>
+  </html>
